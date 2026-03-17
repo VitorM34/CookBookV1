@@ -2,5 +2,3 @@
 
 GET {{MyRecipeBook_HostAddress}}/weatherforecast/
 Accept: application/json
-
-###
