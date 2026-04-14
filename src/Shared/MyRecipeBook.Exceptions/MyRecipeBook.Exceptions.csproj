@@ -6,4 +6,25 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <EmbeddedResource Update="ResourcesMessagesExeption.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ResourcesMessagesExeption.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="ResourcesMessagesExeption.en.resx">
+        <DependentUpon>ResourcesMessagesExeption.resx</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Update="ResourcesMessagesExeption.pt-BR.resx">
+        <DependentUpon>ResourcesMessagesExeption.resx</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="ResourcesMessagesExeption.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ResourcesMessagesExeption.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
 </Project>
