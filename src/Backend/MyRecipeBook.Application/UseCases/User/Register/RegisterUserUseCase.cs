@@ -8,10 +8,11 @@ public class RegisterUserUseCase
     {
         Validate(request);
         
-        //mapear a request em uma entidade 
-        //criptografia da senha 
-        //salvar no banco 
-        
+        var user = new Domain.Entities.User
+        {
+            Email = request.Email,
+            Name = request.Name,    
+        };
         
         return new ResponseRegisterUserJson
         {
