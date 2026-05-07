@@ -7,12 +7,13 @@ public class RegisterUserUseCase
     public ResponseRegisterUserJson Execute(RequestRegisterUserJson request)
     {
         Validate(request);
-        
-        var user = new Domain.Entities.User
+
+        var autoMapper = new AutoMapper.MapperConfiguration(options =>
         {
-            Email = request.Email,
-            Name = request.Name,    
-        };
+            options.AddProfile(new AutoMapping());
+        }).CreateMapper();
+
+        var user = autoMapper.Map<Domain.Entities.User>(request);
         
         return new ResponseRegisterUserJson
         {
